@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../functions.php");
+include("functions.php");
 check_session_id();
 // ログインしているユーザーのid受け取り
 // tweet時に投稿内容と同じテーブルに投稿者も登録
@@ -18,13 +18,16 @@ $username = $_SESSION["username"];
 </head>
 
 <body>
-    <form action="twieet_act.php" method="POST">
+    <form action="twieet_act.php" enctype="multipart/form-data" method="POST">
         <fieldset>
             <legend>twieet
             </legend>
-            <!-- <a href="todo_read.php">一覧画面</a> -->
             <div>
                 <textarea name="todo"></textarea>
+            </div>
+            <div class="file_up">
+                <!-- accept="image/*で画像しか送れないように指定 -->
+                <input name="upfile" type="file" accept="image/*">
             </div>
             <div>
                 <button>submit</button>
