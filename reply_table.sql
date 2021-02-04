@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 2 月 03 日 04:38
+-- 生成日時: 2021 年 2 月 04 日 12:31
 -- サーバのバージョン： 10.4.17-MariaDB
 -- PHP のバージョン: 7.3.24
 
@@ -50,11 +50,11 @@ INSERT INTO `reply_table` (`id`, `reply_comment`, `reply_id`, `reply_created_at`
 (46, '', 54, '2021-02-02 23:44:45', '篠山紀信', 'upload/20210202154445eeb28c5fc9409ba2d9e6d64f192ad8dc.jpg'),
 (47, '', 58, '2021-02-02 23:48:43', '篠山紀信', 'upload/202102021548434673278333889b8cf79e779c696b0fcf.jpg'),
 (48, 'カメハメは打ちたい', 57, '2021-02-02 23:54:16', '篠山紀信', 'upload/202102021554167c9595b88c78f4491864e938ab4bd678.jpeg'),
-(50, 'すごい', 52, '2021-02-03 01:21:11', '篠山紀信', 'upload/20210202172111506d88a68b2e3913823bae6e0ebd85ef.'),
 (51, 'すごい', 77, '2021-02-03 01:52:10', '篠山紀信', NULL),
 (52, 'pppp', 58, '2021-02-03 01:52:30', '篠山紀信', NULL),
 (53, 'カメハメは打ちたい', 58, '2021-02-03 01:52:54', '篠山紀信', NULL),
-(54, 'plpkp', 58, '2021-02-03 01:53:07', '篠山紀信', 'upload/202102021753079fb6f47aca49a614af55032c14650a70.jpg');
+(54, 'plpkp', 58, '2021-02-03 01:53:07', '篠山紀信', 'upload/202102021753079fb6f47aca49a614af55032c14650a70.jpg'),
+(55, '', 58, '2021-02-04 13:39:25', '＠破壊王子ベジータ', 'upload/20210204053925aa115881003b5fcd1600d6a2fcdfb79e.jpeg');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -74,7 +74,7 @@ ALTER TABLE `reply_table`
 -- テーブルの AUTO_INCREMENT `reply_table`
 --
 ALTER TABLE `reply_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

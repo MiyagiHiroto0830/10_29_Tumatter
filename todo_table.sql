@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 2 月 03 日 04:34
+-- 生成日時: 2021 年 2 月 04 日 12:31
 -- サーバのバージョン： 10.4.17-MariaDB
 -- PHP のバージョン: 7.3.24
 
@@ -56,7 +56,8 @@ INSERT INTO `todo_table` (`id`, `todo`, `deadline`, `created_at`, `updated_at`, 
 (76, 'lplplp', '0000-00-00', '2021-02-03 01:50:35', '2021-02-03 01:50:35', '篠山紀信', NULL),
 (77, 'lplppl', '0000-00-00', '2021-02-03 01:50:51', '2021-02-03 01:50:51', '篠山紀信', 'upload/20210202175051661592414d783c3f953f2791ad84140a.jpg'),
 (78, 'ppp', '0000-00-00', '2021-02-03 01:53:40', '2021-02-03 01:53:40', '篠山紀信', NULL),
-(79, 'qqw', '0000-00-00', '2021-02-03 12:31:35', '2021-02-03 12:31:35', '篠山紀信', NULL);
+(79, 'qqw', '0000-00-00', '2021-02-03 12:31:35', '2021-02-03 12:31:35', '篠山紀信', NULL),
+(80, 'uuuuuuuuu', '0000-00-00', '2021-02-04 13:39:04', '2021-02-04 13:39:04', '＠破壊王子ベジータ', 'upload/202102040539042d3b6f97d76699c1e2b53f1da01921a2.jpeg');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -76,7 +77,7 @@ ALTER TABLE `todo_table`
 -- テーブルの AUTO_INCREMENT `todo_table`
 --
 ALTER TABLE `todo_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

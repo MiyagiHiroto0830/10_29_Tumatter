@@ -2,7 +2,7 @@
 session_start();
 include("functions.php");
 check_session_id();
-var_dump($_FILES);
+
 
 // 画像データの取得
 // $img_name = $_FILES['img']['name'];

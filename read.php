@@ -3,6 +3,7 @@ session_start();
 include("functions.php");
 check_session_id();
 // DB接続します
+
 $pdo = connect_to_db();
 // データ取得SQL作成
 // テーブル結合
@@ -30,7 +31,12 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
 <body>
   <div class="top">
-    <a class="logout" href="login/todo_logout.php">ログアウト</a>
+    <a class="logout" href="login/todo_logout.php"><img width="40px" src="img/logout.jpeg"></a>
+
+  </div>
+  <div class="modal">
+    <div class="bigimg"><img width="1260px" height="auto" src=""></div>
+    <p class="close-btn"><a href="">✖</a></p>
   </div>
   <?php foreach ($results as $result) : ?>
     <?php $id = $result["id"] ?>
@@ -52,7 +58,13 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
               <?php if ($result["image"] === NULL) : ?>
                 <?php echo ""; ?>
               <?php else : ?>
-                <img src="<?php echo $result['image'] ?>" width='150px' height='auto' class='mr-3'>;
+                <ul style="list-style: none;">
+                  <li><a href=""><img src="<?php echo $result['image'] ?>" width='150px' height='auto' class='mr-3'></li>
+                </ul>
+                <!-- <div class="modal">
+                  <div class="bigimg" width="700px" height="auto"><img src=""></div>
+                  <p class="close-btn"><a href="">✖</a></p>
+                </div> -->
                 <br>
                 <br>
               <?php endif; ?>
@@ -74,7 +86,32 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
       </div>
     </div>
   <?php endforeach; ?>
-  <img src="img/twitter_icon.jpeg" height="100px" width="100px" alt="fixedImage" id="floatButton" onclick="location.href='twieet.php'">
+  <img class="icon" src="img/twitter_icon.jpeg" height="100px" width="100px" alt="fixedImage" id="floatButton" onclick="location.href='twieet.php'">
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $('.modal').hide();
+  $('.close-btn').hide();
+  $('ul li a').click(function() {
+    var imgSrc = $(this).children().attr('src');
+    $('.bigimg').children().attr('src', imgSrc);
+    $('.modal').fadeIn();
+    // $('body,html').css('overflow-y', 'hidden');
+    $('.close-btn').show();
+    $(".twitter__container").hide();
+    $(".icon").hide();
+    $(".top").hide();
+    return false
+  });
+
+  $('.close-btn').click(function() {
+    $('.modal').hide();
+    $('body,html').css('overflow-y', 'visible');
+    $(".twitter__container").show();
+    $(".icon").show();
+    $(".top").show();
+    return false
+  });
+</script>
 
 </html>
